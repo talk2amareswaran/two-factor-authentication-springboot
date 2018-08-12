@@ -1,0 +1,87 @@
+.pageCenterDiv {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 550px;
+	height: 450px;
+}
+
+.font_bold {
+	font-weight: bold;
+}
+
+.width_150 {
+	width: 150px;
+}
+
+.width_120 {
+	width: 120px;
+}
+
+.marginTop_minus1px {
+	margin-top: -1px;
+}
+
+.margin_left_0px {
+	margin-left: 0px;	
+}
+
+.margin_right_0px {
+	margin-right: 0px;	
+}
+
+.max_height_550px {
+	max-height: 950px;
+}
+
+.text_align_right {
+	text-align:right;
+}
+
+.text_align_center {
+	text-align:center;
+}
+
+.font_size_37 {
+	font-size: 37px;
+}
+
+.closeBtn {
+	
+	background-color: IndianRed; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 2px 12px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+.customBtn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 2px 12px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.customBtn:hover {
+    background-color: RoyalBlue;
+}
+
+.closeBtn:hover {
+    background-color: DarkRed;
+}
+
+.dropdown_custom {
+	height: 35px;
+    width: 250px;
+    padding-left:5px;
+}
+
+#mainContent {
+	height:934px;
+}

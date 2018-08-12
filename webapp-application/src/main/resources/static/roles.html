@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Administrator Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css"></link>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="roles.js"></script>
+	</head>
+	<body>
+	<div>
+	<div class="container_fluid">
+	<div class="card">
+		<div class="card-header bg-info text-white font_bold">Administrator</div>
+	</div>
+	</div>
+		<div class="container_fluid h-100">
+    	<div class="row h-100 marginTop_minus1px margin_left_0px margin_right_0px max_height_550px">
+	        <aside class="col-12 col-md-2 p-0 bg-dark">
+	            <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start py-2">
+	                <div class="collapse navbar-collapse">
+	                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="permissions.html"><i class="fa fa-lock fa-fw"></i><span class="d-none d-md-inline"> Permissions</span></a>
+	                        </li>
+	                          <li class="nav-item">
+	                            <a class="nav-link pl-0" href="roles.html"><i class="fa fa-user-plus fa-fw"></i><span class="font-weight-bold"> Roles</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="users.html"><i class="fa fa-users fa-fw"></i><span class="d-none d-md-inline"> Users</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="settings.html"><i class="fa fa-cogs fa-fw"></i><span class="d-none d-md-inline"> Settings</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="logout.html"><i class="fa fa-sign-out fa-fw"></i><span class="d-none d-md-inline"> Logout</span></a>
+	                        </li>
+	                        
+	                    </ul>
+	                </div>
+	            </nav>
+	        </aside>
+        <main class="col bg-faded py-3" id="mainContent">
+            <h2>Roles</h2>
+               <div class="alert alert-danger" style="display:none;">
+    				<strong>You don't have the permission to see this page</strong>
+  				</div>
+  				<div class="alert alert-success" style="display:none;">
+    <strong>Role updated successfully</strong>
+  </div>
+            	<button id="addNewBtn" type="button" class="btn btn-primary float-right width_120" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"></i> Add New</button>
+            <BR/><BR/><BR/>
+            <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Role name</th>    
+        <th class="text_align_center">Action</th>    
+      </tr>
+    </thead>
+    <tbody>
+   
+       
+    </tbody>
+  </table>
+  
+  
+    <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add Role</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+          
+          <form>
+          <div class="form-group">
+    			<label for="role_name">Role Name</label>
+    			<input type="text" class="form-control" id="new_role_name" maxlength="45">
+  			</div>
+		</form>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="addOperation">Add</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="modal fade" id="editModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Edit Role</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+          
+          <form>
+          <div class="form-group">
+    			<label for="role_name">Role Name</label>
+    			<input type="text" class="form-control" id="edit_role_name" maxlength="45">
+    			<input type="hidden" class="form-control" id="edit_id">
+  			</div>
+		</form>
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="updateOperation">Update</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+   <div class="modal fade" id="deleteModel">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Delete Role</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input type="hidden" class="form-control" id="delete_id">
+          
+      Are you sure you want to delete the role?
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="deleteOperation">Delete</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+  
+            
+			</div>
+		</main>
+    	</div>
+	
+	</body>
+</html>

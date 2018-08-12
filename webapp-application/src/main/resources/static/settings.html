@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Administrator Login</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css"></link>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="settings.js"></script>
+	</head>
+	<body>
+	<div>
+	<div class="container_fluid">
+	<div class="card">
+		<div class="card-header bg-info text-white font_bold">Administrator</div>
+	</div>
+	</div>
+		<div class="container_fluid">
+    	<div class="row marginTop_minus1px margin_left_0px margin_right_0px max_height_550px">
+	        <aside class="col-12 col-md-2 p-0 bg-dark">
+	            <nav class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start py-2">
+	                <div class="collapse navbar-collapse">
+	                    <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="permissions.html"><i class="fa fa-lock fa-fw"></i><span class="d-none d-md-inline"> Permissions</span></a>
+	                        </li>
+	                          <li class="nav-item">
+	                            <a class="nav-link pl-0" href="roles.html"><i class="fa fa-user-plus fa-fw"></i><span class="d-none d-md-inline"> Roles</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="users.html"><i class="fa fa-users fa-fw"></i><span class="d-none d-md-inline"> Users</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="settings.html"><i class="fa fa-cogs fa-fw"></i><span class="font-weight-bold"> Settings</span></a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link pl-0" href="logout.html"><i class="fa fa-sign-out fa-fw"></i><span class="d-none d-md-inline"> Logout</span></a>
+	                        </li>
+	                        
+	                    </ul>
+	                </div>
+	            </nav>
+	        </aside>
+        <main class="col bg-faded py-3" id="mainContent">
+            <h2>Settings</h2>
+            
+              <div class="alert alert-danger" style="display:none;">
+    				<strong>You don't have the permission to see this page</strong>
+  				</div>
+  				
+  				 <div class="alert alert-success" style="display:none;">
+    				<strong>Permissions are assigned to the role successfully</strong>
+  				</div>
+  				
+            <ul class="nav nav-tabs">
+            <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">View Permissions by Role</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">View Users by Role</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Assign Permissions by Role</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu3">Assign Users by Role</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <div class="row">
+  <div class="col">
+  	<select id="view_permissions_role" class="dropdown_custom">
+  	</select>
+  </div>
+</div>
+<BR/>
+<table class="table table-bordered" id="view_permissions_role_table" style="display:none;">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Permission name</th>        
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+       <div class="row">
+  <div class="col">
+  	<select id="view_users_role" class="dropdown_custom">
+  	</select>
+  </div>
+</div>
+<BR/>
+<table class="table table-bordered" id="view_users_role_table" style="display:none;">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Email Address</th>        
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+    </div>
+    
+      <div id="menu2" class="container tab-pane fade"><br>
+      <div class="row">
+  <div class="col">
+  	<select id="assign_permissions_role" class="dropdown_custom">
+  		  		
+  	</select>
+  </div>
+</div>
+<BR/>
+
+ <div class="row">
+  <div class="col">
+<select id="assign_permissions_role_select" class="dropdown_custom" multiple style="height:300px;display:none;">
+  		
+  	</select>
+  	
+  	</div>
+  	</div>
+  	<BR/>
+  	<button type="button" class="btn btn-success" style="margin-left:180px;display:none;" id="assign_permissions_btn">Assign</button>
+    </div>
+    
+    
+      <div id="menu3" class="container tab-pane fade"><br>
+      <div class="row">
+  <div class="col">
+  	<select id="assign_users_role" class="dropdown_custom">
+  		  		
+  	</select>
+  </div>
+</div>
+<BR/>
+
+ <div class="row">
+  <div class="col">
+<select id="assign_users_role_select" class="dropdown_custom" multiple style="height:300px;display:none;">
+  	</select>
+  	
+  	</div>
+  	</div>
+  	<BR/>
+  	<button type="button" class="btn btn-success" style="margin-left:180px; display:none;"  id="assign_users_btn">Assign</button>
+
+    </div>
+    
+  </div>
+			</div>
+		</main>
+    	</div>
+	</div>
+	</body>
+</html>
