@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: authorization-server  
+    datasource: 
+        driverClassName: com.mysql.jdbc.Driver
+        url: "jdbc:mysql://localhost:3306/userservice?autoreconnect=true"
+        password: "root"
+        username: "root"
+        testOnBorrow: true
+        testWhileIdle: true
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 30000
+        validationQuery: SELECT 1
+        max-active: 15
+        max-idle: 10
+        max-wait: 8000
+config:
+    oauth2:
+        privateKey: -----BEGIN RSA PRIVATE KEY-----MIIEpAIBAAKCAQEArbV1Q41MyoV8Jla9ma2JDlZDeAY0pTajS+IJK6X/TbT6zRJOtwrOVikiTohKQg82yCc3KVaP5n7pla6UMjdkx15JxW1rjgKXSz46P/WxJY7BoswBRF5fZOrUb42aiPR3FcYJi9GdyTyyb1QkXDI+q+yv8PYw3ypGI+AZ6Ui3CzX9Mp0eSyAiWuaEZrae7e6l/gmO+2GPAbZxcgCWDmEZSwIQGh/Kc8r2xiWwDfBChAYFsIkd1MitiyFkJdg44EBYi89D5a201IMLPFZUeJ2sEmqG2zWnya7KtVBCV9OhArkKUR9nBWTn4o/yjO0F5QDVT1PGYLXDCrgRQ7z370vIewIDAQABAoIBABfqdsWhK6RqcmhY4uvIn6kQqWNZ/1+LwTnOWhLfXOIW+7zGO34qB7SHH0kOrKKhs5olBAw19cP3TzOjgJXVWJO2YJPE99zqcGgUnjJ2IjiYigJe8gG2uI2NY0gkh9U5Szf9Nw1AA+hT6gE35XWoGUbUZHjZfGsNR/Dihs6+iy0IvMVy0DJt/RI7Jz4a1dLGMqOw29GB5NCV44e8t73Yj8zyFsF9sQEHYQCbM1ANClIxsVerMhKnTCumSOZVc0XTcPI4SXFfnk+HNUl4j6xhkg8diu0YFSX4m5wtjFTMP+h1o/JWwY5CrW+JQTDelHLm6oXKCrsVo7PHkavsCrnsIqkCgYEA2dKv5tget6z9utfBff2olmrsTCRTtni5qv2TgVMECcVH/DhluC+muBss9V4gfsomDRoiGxvyhsKOE5CfR0xweOJaB5cpb4UDOb6m9AlY5oRFas0UmohAC9jZz8kf8dW93Z5nefYbQPC4sfmiU0bepITHCJKlHQN6seuN4j/wAW8CgYEAzCdzK6sBqGkSmBlMAW2tUq1t6HcNNmd9EeDFgLMR/56j/AEmd2uKEh/UcZ80OBKfNgfnOxKuESMgMbmdG5ahAnvi0UwhtzD8F7h53PXxfNGKJBD+kq/yvmKLQg9aJpn4d74TXyvSwQMvU5S+yWL+/1GkE6ejkIKtp+CpPGKlC7UCgYAgZ93PhBudy9i7sVmR+ujX5/Rbp5Pks7U7oRoOxWD2ayk4dtN7QWuWPETGBEjlVAGxNVAZpGDCd7NXac6odtDMyzAFrRF3C9zc/GYuLC3TrZ3+M6B7FQYiPRK6fPuJqPjkPaq7VEfds3Jm1/K0XPjGlRJfTiHOXTQlwBuNq2FzdQKBgQC0rcFXB1xLQNqs8855gSihAE5CK4LtAEAHX4dL9K9cLHly4U266NjkW3k4Ka8cZRa0yd/SPyEAl7a5a01pCjFrMls14owARgEFuUVY0e2sCwKYEtZK2h8acbpPd6jQevoUd4tLckxud7Qd44nKT6vgKM/ueTHgBldMOR9uCtuI9QKBgQC+0SRtQqc7kukuAL9rOUQKIUkdKR8hMMrhTXV8jQaq1mhJxIl+5d9R/kqhneAOI7nHLizOnu9nKk89s196wBnYCZPqexiNmgwfEs3KZnAje71VdHnP7kvAVJRMeU1G75ucfkdCjcjLFJBMUT91cHmwb6k9EcHzYABkoRcVX8yG7w==-----END RSA PRIVATE KEY-----
+        publicKey: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArbV1Q41MyoV8Jla9ma2JDlZDeAY0pTajS+IJK6X/TbT6zRJOtwrOVikiTohKQg82yCc3KVaP5n7pla6UMjdkx15JxW1rjgKXSz46P/WxJY7BoswBRF5fZOrUb42aiPR3FcYJi9GdyTyyb1QkXDI+q+yv8PYw3ypGI+AZ6Ui3CzX9Mp0eSyAiWuaEZrae7e6l/gmO+2GPAbZxcgCWDmEZSwIQGh/Kc8r2xiWwDfBChAYFsIkd1MitiyFkJdg44EBYi89D5a201IMLPFZUeJ2sEmqG2zWnya7KtVBCV9OhArkKUR9nBWTn4o/yjO0F5QDVT1PGYLXDCrgRQ7z370vIewIDAQAB-----END PUBLIC KEY-----
+        clientid: talk2amareswaran
+        clientSecret: talk@amareswaran
