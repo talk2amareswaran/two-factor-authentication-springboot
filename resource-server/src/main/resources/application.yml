@@ -22,4 +22,4 @@ security:
         resource:
             filter-order: 3 
             jwt: 
-                key-value: -----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArbV1Q41MyoV8Jla9ma2JDlZDeAY0pTajS+IJK6X/TbT6zRJOtwrOVikiTohKQg82yCc3KVaP5n7pla6UMjdkx15JxW1rjgKXSz46P/WxJY7BoswBRF5fZOrUb42aiPR3FcYJi9GdyTyyb1QkXDI+q+yv8PYw3ypGI+AZ6Ui3CzX9Mp0eSyAiWuaEZrae7e6l/gmO+2GPAbZxcgCWDmEZSwIQGh/Kc8r2xiWwDfBChAYFsIkd1MitiyFkJdg44EBYi89D5a201IMLPFZUeJ2sEmqG2zWnya7KtVBCV9OhArkKUR9nBWTn4o/yjO0F5QDVT1PGYLXDCrgRQ7z370vIewIDAQAB-----END PUBLIC KEY-----
+                key-value: <public-key>
